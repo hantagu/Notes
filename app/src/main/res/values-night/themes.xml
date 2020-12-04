@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Notes" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="android:statusBarColor">#303F9F</item>
+        <item name="colorPrimary">#3F51B5</item>
+        <item name="colorAccent">#4CAF50</item>
+        <item name="colorOnSecondary">#FFFFFF</item>
+        <item name="toolbarStyle">@style/Toolbar</item>
+    </style>
+
+    <style name="Toolbar" parent="Widget.MaterialComponents.Toolbar.Primary">
+        <item name="titleTextColor">#FFFFFF</item>
+    </style>
+
+    <style name="NoteItem">
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+</resources>
+
+<!--
+
+-->

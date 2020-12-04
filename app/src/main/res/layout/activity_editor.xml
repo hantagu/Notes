@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:id="@+id/editor_toolbar_wrapper"
+        android:layout_height="?android:attr/actionBarSize">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            app:title="@string/app"
+            android:id="@+id/editor_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/colorPrimary"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout android:visibility="gone"
+        android:paddingTop="8dp"
+        android:paddingEnd="12dp"
+        android:paddingStart="12dp"
+        android:paddingBottom="8dp"
+        android:id="@+id/editor_new"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/editor_toolbar_wrapper">
+
+        <EditText
+            android:lines="1"
+            android:maxLength="24"
+            android:inputType="text"
+            android:hint="@string/title"
+            android:id="@+id/editor_new_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:padding="4dp"
+            android:autoLink="all"
+            android:gravity="start"
+            android:background="@null"
+            android:hint="@string/text"
+            android:layout_marginTop="4dp"
+            android:id="@+id/editor_new_text"
+            android:inputType="textMultiLine"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/editor_new_title"
+            android:layout_above="@id/editor_new_button" />
+
+        <com.google.android.material.button.MaterialButton
+            android:text="@string/save"
+            android:layout_marginTop="6dp"
+            android:id="@+id/editor_new_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:backgroundTint="?attr/colorAccent"
+            android:textColor="?attr/colorOnSecondary" />
+
+    </RelativeLayout>
+
+    <RelativeLayout android:visibility="gone"
+        android:paddingTop="8dp"
+        android:paddingEnd="12dp"
+        android:paddingStart="12dp"
+        android:paddingBottom="8dp"
+        android:id="@+id/editor_edit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/editor_toolbar_wrapper">
+
+        <EditText
+            android:lines="1"
+            android:maxLength="24"
+            android:inputType="text"
+            android:hint="@string/title"
+            android:id="@+id/editor_edit_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:padding="4dp"
+            android:autoLink="all"
+            android:gravity="start"
+            android:background="@null"
+            android:hint="@string/text"
+            android:layout_marginTop="4dp"
+            android:inputType="textMultiLine"
+            android:id="@+id/editor_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/editor_edit_title"
+            android:layout_above="@id/editor_edit_button" />
+
+        <com.google.android.material.button.MaterialButton
+            android:text="@string/save"
+            android:layout_marginTop="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editor_edit_button"
+            android:layout_alignParentBottom="true"
+            android:backgroundTint="?attr/colorAccent"
+            android:textColor="?attr/colorOnSecondary" />
+
+    </RelativeLayout>
+
+    <RelativeLayout android:visibility="gone"
+        android:paddingTop="8dp"
+        android:paddingEnd="12dp"
+        android:paddingStart="12dp"
+        android:paddingBottom="8dp"
+        android:id="@+id/editor_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/editor_toolbar_wrapper">
+
+        <TextView
+            android:scrollbars="vertical"
+            android:id="@+id/editor_view_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/editor_view_button" />
+
+        <com.google.android.material.button.MaterialButton
+            android:text="@string/copy"
+            android:layout_marginTop="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editor_view_button"
+            android:layout_alignParentBottom="true"
+            android:backgroundTint="?attr/colorAccent"
+            android:textColor="?attr/colorOnSecondary" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
